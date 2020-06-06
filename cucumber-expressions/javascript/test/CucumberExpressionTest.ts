@@ -262,7 +262,7 @@ describe('CucumberExpression', () => {
         'widget',
         /\w+/,
         null,
-        function(s: string) {
+        function (s: string) {
           return this.createWidget(s)
         },
         false,
@@ -285,7 +285,8 @@ describe('CucumberExpression', () => {
   })
 
   describe('escapes special characters', () => {
-    ;['\\', '[', ']', '^', '$', '.', '|', '?', '*', '+'].forEach(character => {
+    const special = ['\\', '[', ']', '^', '$', '.', '|', '?', '*', '+']
+    special.forEach((character) => {
       it(`escapes ${character}`, () => {
         const expr = `I have {int} cuke(s) and ${character}`
         const expression = new CucumberExpression(
@@ -331,5 +332,5 @@ const match = (expression: string, text: string) => {
   if (!args) {
     return null
   }
-  return args.map(arg => arg.getValue(null))
+  return args.map((arg) => arg.getValue(null))
 }
