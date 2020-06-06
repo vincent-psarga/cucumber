@@ -6,7 +6,6 @@ import org.apiguardian.api.API;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static io.cucumber.cucumberexpressions.Ast.AstNode.Type.PARAMETER_NODE;
